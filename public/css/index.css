@@ -1,7 +1,182 @@
-html {
-  max-width: 720px;
+:root {
+  --text-color: yellow;
 }
 
-body {
-  background: #fff;
+
+.card > p {
+  color: green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px var(--text-color, blue);
+}
+
+p:focus, p:active, p:hover {
+  -webkit-text-fill-color: yellow;
+  -webkit-text-stroke: 1px pink;
+
+  /* direction: rtl; */
+}
+
+#test {
+  color: unset;
+  -webkit-text-fill-color: unset;
+  -webkit-text-stroke: unset;
+
+  /* writing-mode: horizontal-tb; */
+
+  text-align: justify;
+
+  letter-spacing: 0.1em;
+
+}
+
+span {
+  text-align: left;
+  text-transform: lowercase;
+
+  text-decoration: underline dotted red;
+}
+
+span:hover {
+  text-decoration-line: line-through;
+  text-decoration-style: double;
+}
+
+pre {
+  tab-size: 8px;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  font-display: swap;
+}
+
+span {
+  font-size: large;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+#test {
+  display: ;
+}
+
+.block {
+  display: block;
+  background: yellow;
+  margin: auto;
+  padding: 5%;
+
+  max-width: 300px;
+  min-height: fit-content;
+  max-height: min-content;
+  padding: 15px;
+  background-image: url('/img/test.png');
+  background-attachment: fixed;
+
+  border-image-source: url('/img/test2.jpg');
+  border-image-width: 10%;
+  border-image-slice: 10%;
+  border-image-repeat: round;
+  border-image-outset: 70px;
+}
+
+#block {
+  margin: 20px;
+}
+
+.card {
+  border: medium double var(--text-color, blue);
+  border-bottom-width: 20px;
+  border-bottom-color: green;
+  border-bottom-left-radius: 50px;
+  background: red;
+  /* display: none; - повністю зникає і місце займають сусідні елементи */
+  visibility: ; 
+  /* visibility: hidden; - залишається пусте місце,верстка не ламається */
+  
+}
+
+.card:hover {
+  outline: 2px solid var(--text-color, blue);
+  outline-offset: 5px;
+  box-shadow: 5px 5px 10px 2px var(--text-color, blue);
+  cursor: pointer;
+  opacity: 50%;
+}
+
+h1 {
+  text-shadow: 0px 0px 3px var(--text-color, blue);
+  line-height: 20 0%
+}
+
+.height {
+  font-size: 25px;
+  vertical-align: 50%;
+}
+
+p {
+  background: rgb(192, 180, 180);
+  width: 200;
+  height: 100;
+  overflow: scroll;
+  hyphens: manual;
+  hyphenate-character: auto;
+  word-spacing: 10px;
+  resize: both;
+}
+
+/* main {
+  background-image: url('/img/600x400.png');
+  background-repeat: space;
+} */
+
+.card_list {
+  background: yellow;
+  /* list-style-type: upper-alpha; */
+  list-style-position: inside;
+  list-style-image: linear-gradient(
+    to bottom right, var(--text-color, blue), red
+  );
+}
+
+.card_description_item {
+  display: list-item;
+}
+
+.table tr td {
+  border: 3px solid #1a1717;
+  border-bottom-color: red;
+  border-right-color: var(--text-color, blue);
+}
+
+.table {
+  table-layout: fixed;
+  width: 500px;
+  border-collapse: unset;
+  border-spacing: 20px 10px;
+  caption-side: top;
+  empty-cells: hide;
+}
+
+td::before {
+  content: open-quote;
+}
+
+td::after {
+  content: close-quote;
+}
+
+.calc {
+  width: 600px;
+  margin: 0;
+  /* margin-right: calc(100% - 600px); */
+  margin-left: calc(50% - (600px / 2));
+}
+
+.col_test {
+  width: 800px;
+  columns: 3 5em;
+  column-rule: dotted blue;
 }
