@@ -1,0 +1,24 @@
+<div class='header'>
+  <div class="header_upper">
+    {{> logo-t7 }}
+  
+    <nav class='header_nav'>
+      {{#each header.links}}
+        <a href='{{url}}' class='nav_link'>{{text}}</a>
+      {{/each}}
+    </nav>
+  </div>
+  <div class="header_lower">
+    {{#with header.ad}}  
+      <div class="ad">
+        <span class="ad_badge">Ad</span>
+        <span class="ad_text">{{text}}: </span>
+        <a href="{{url}}" class="ad_url">{{url}}</a>
+      </div>
+    {{/with}}
+
+    <div class="users">Users online: {{header.userOnline}}</div>
+
+  </div>
+
+</div>

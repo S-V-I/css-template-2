@@ -1,0 +1,23 @@
+<div class='articles_section'>
+
+  {{#each articles}}
+    <div class='articles_card'>
+      <div class='image_with_badge_container'>
+        <img
+          class='articles_img'
+          src='{{photo}}'
+          id='{{id}}'
+          alt='{{name}}'
+        />
+        {{#if isNew}}
+          <span class='articles_badge'>NEW</span>
+        {{/if}}
+      </div>
+      <div class='articles_title'>{{name}}</div>
+      <p class='articles_description'>{{description}}</p>
+      <button class='articles_button'>Read All</button>
+
+    </div>
+  {{/each}}
+
+</div>
