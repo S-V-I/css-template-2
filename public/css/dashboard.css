@@ -477,7 +477,7 @@ body {
 		}
 	}
 
-	@media all and (801px < width < 900px) {
+	@media all and (750px < width < 900px) {
 		.analytic__block {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
